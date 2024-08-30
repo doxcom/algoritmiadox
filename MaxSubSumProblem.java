@@ -8,6 +8,7 @@ public class MaxSubSumProblem {
 
         for (int i = 0; i < array.length; i++) {
             maxEndingHere += array[i]; // here start to do the sum
+
             System.out.println("Max ending here init: " + maxEndingHere);
             // -2, -3, 4, -1, -2, 1, 5, -3
             max_so_far = Math.max(max_so_far, maxEndingHere);

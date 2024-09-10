@@ -1,3 +1,6 @@
+Java
+
+
 class SolutionTwoSum {
     // https://leetcode.com/problems/two-sum/
 
@@ -7,14 +10,18 @@ class SolutionTwoSum {
     }
     HashMap<Integer, Integer> indexStore = new HashMap<>();
     static int[] twoSum(int[] nums, int target) {
-      
+      int numbCom=0;
+      bool flag=false;
         for (int i = 0; i < nums.length; i++) {
             for (int j = nums.length-1; j <= 0; j--) {
                  i++;
                 if(nums[i]+nums[j]==target){
                 indexStore.put(i,j);
                  break;
-                }else if(){
+                }else if(nums[i]<target &&   nums[j]>=target){
+                    indexStore.put(i,-1);
+                  numbCom=target-nums[i];
+                  bool=true;
                }
             }
         }

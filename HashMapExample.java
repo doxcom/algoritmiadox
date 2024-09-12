@@ -10,7 +10,7 @@ public class HashMapExample {
         hashMapVariable.put(1,"one");
 
         System.out.println(hashMapVariable.get(1));
-
+      //de puros integer
         HashMap<Integer, Integer> hashStore = new HashMap<>();
 
         hashStore.put(2,2);

@@ -21,23 +21,22 @@ class SolutionTwoSum {
                  i++;
                 if(nums[i]==numbCom1){
                     indexStore.put(i,nums[i]);//[1,7]
-                return new int[] {indexStore.get(target-numbCom1),indexStore.get(nums[i])};//[0,1]
-                 //break;
+                nums = new int[] {indexStore.get(target-numbCom1),indexStore.get(nums[i])};//[0,1]
+                 break;
                 }else if(nums[i]<target && indexStore.get(nums[i])!=null){
                     indexStore.put(i,nums[i]);//[0,3]
                   numbCom1=target-nums[i]; //3
 
-               }else if(nums[j]<target ){
+               }else if(nums[j]<target && indexStore.get(nums[j])!=null){
                     indexStore.put(j,nums[j]);//[2,4]
                     numbCom2=target-nums[j];//2
                 }else if(nums[j]==numbCom2){
                     indexStore.put(j,nums[j]);
-                    return new int[]{indexStore.get(target-numbCom2),indexStore.get(nums[j])};
-                   // break;
+               nums = new int[]{indexStore.get(target-numbCom2),indexStore.get(nums[j])};
+                    break;
                 }
             }
         }
-
 
         return nums;
     }

@@ -5,39 +5,35 @@ class SolutionTwoSum {
 
     public static void main(String[] args) {
 
-        int[] sumarray = { 2, 7, 11, 15 };
+        int[] sumarray = { 3, 3 };
         //3,2,4  target 6
 
-        twoSum(sumarray,9);
+        twoSum(sumarray,6);
         System.out.println(twoSum(sumarray, 9));
     }
-   // 2, 7, 11, 15   target 9
-    static int[] twoSum(int[] nums, int target) {
+   // 2, 7, 11, 15   target 9+
+    public static int[] twoSum(int[] nums, int target) {
         HashMap<Integer, Integer> indexStore = new HashMap<>();
       int numbCom1=-1;
       int numbCom2=-1;
+      int [] pos =new int[2];
         for (int i = 0; i < nums.length; i++) {
-            for (int j = nums.length-1; j <= 0; j--) {
-                 i++;
-                if(nums[i]==numbCom1){
-                    indexStore.put(i,nums[i]);//[1,7]
-                nums = new int[] {indexStore.get(target-numbCom1),indexStore.get(nums[i])};//[0,1]
-                 break;
-                }else if(nums[i]<target && indexStore.get(nums[i])!=null){
-                    indexStore.put(i,nums[i]);//[0,3]
-                  numbCom1=target-nums[i]; //3
+            for (int j = nums.length-1; j >= 0; j--) {
+              //   i++;
+                 if(nums[i]+nums[j]==target){
+                     pos= new int[]{i,j};
 
-               }else if(nums[j]<target && indexStore.get(nums[j])!=null){
-                    indexStore.put(j,nums[j]);//[2,4]
-                    numbCom2=target-nums[j];//2
-                }else if(nums[j]==numbCom2){
-                    indexStore.put(j,nums[j]);
-               nums = new int[]{indexStore.get(target-numbCom2),indexStore.get(nums[j])};
-                    break;
+                     System.out.println("position "+ pos[i]+","+pos[j]);
+                   //  return pos;
+                 }
                 }
             }
+
+      //  System.out.println(pos[0]+","+pos[1]);
+        return pos;
+
         }
 
-        return nums;
+
     }
-}
+

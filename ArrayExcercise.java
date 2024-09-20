@@ -3,12 +3,13 @@ public class ArrayExcercise {
     public static void main(String[] args) {
 
 
-        int [] array =  {2,34,1,3,5,6,4,78,64,32}; //7
+        int [] array =  {1,2,3,4}; //7
 
         for(int i=0; i<array.length; i++){
+            System.out.println("Left "+ array[i]);
             for(int j=array.length-1; j>=0; j--){
-                System.out.println("Left "+ array[i]);
-                i++;
+
+              //  i++;
                 System.out.println("Right "+array[j]);
             }
         }

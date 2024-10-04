@@ -3,15 +3,14 @@ public class ArrayExcercise {
     public static void main(String[] args) {
 
 
-        int [] array =  {1,2,3,4}; //7
+      //check for(j=1; j!=i && j<n; j++)
+	        int [] array =  {1,2,3,4}; //7
 
-        for(int i=0; i<array.length; i++){
-            System.out.println("Left "+ array[i]);
-            for(int j=array.length-1; j>=0; j--){
-
-              //  i++;
-                System.out.println("Right "+array[j]);
-            }
-        }
+	        int i,j=array.length;
+	        for(i=0;  j=array.length-1, i==j; i++,j--){
+	         
+	        	System.out.print("iteration i: "+ i + "iteration j: "+ j);
+	        }
+	    }
     }
 }

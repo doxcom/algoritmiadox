@@ -14,21 +14,29 @@ class SolutionTwoSum {
         HashMap<Integer, Integer> indexStore = new HashMap<>();
       int numbCom1=Integer.MIN_VALUE;
       int numbCom2=Integer.MIN_VALUE;
+      
       int [] pos =new int[2];
-        for (int i = 0; i <nums.length; i++) {
-            for (int j=nums.length-1; j>=0; j--){
+      
+      
+      int i,j;
+      for( i=0,j =nums.length-1; i>=j; i++,j--) {
+    	  
+    	  if(nums[i]+nums[j]==target){
+              pos[0]=i;
+              pos[1]=j;
+              break;
+              
+              //check for(j=1; j!=i && j<n; j++)
+          }
+       
+      }
+      
+      
+      
+        
 
-                if(nums[i]+nums[j]==target){
-                    pos[0]=i;
-                    pos[1]=j;
-                    break;
-                    
-                    //check for(j=1; j!=i && j<n; j++)
-                }
-             
-            }
-        }
-
+               
+        
         return pos;
     }
 

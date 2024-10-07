@@ -30,14 +30,10 @@ class SolutionTwoSum {
           }
        
       }
-      
-      
-      
-        
-
-               
-        
+              
         return pos;
     }
 
 }
+
+

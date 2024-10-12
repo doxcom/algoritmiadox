@@ -7,6 +7,7 @@ public class ArrayExcercise {
 
 		int i,j;
 
+		
 		for( i=0, j=array.length-1; i<=j; i++,j--) {
 
 			System.out.println("Left side i: " + array[i] + "   Right side j: " + array[j]);

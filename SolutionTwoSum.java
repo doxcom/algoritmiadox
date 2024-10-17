@@ -18,7 +18,7 @@ class SolutionTwoSum {
       int i,j;
       for( i=0,j =nums.length-1; i<=j; i++,j--) {
 
-          if(nums[i]+nums[j]==target && nums.length==2){
+          if(nums[i]+nums[j]==target){
               pos[0]=i;
               pos[1]=j;
               break;
@@ -26,7 +26,8 @@ class SolutionTwoSum {
           if(indexStore.size()>=1 && nums[i]==numbCom1){ //if the two numb was found on the left side of the arry
               pos[0]=indexStore.get(target-nums[i]);//
               pos[1]=i;  //[-1,-2,-3,-4,-5] -8
-                         // 0   1  2  4  5    i
+                         //  0  1  2  3  4    i
+                            //  1     3
               break;
           }else if(indexStore.size()>=1 && nums[j]==numbCom2){ //if the two numb was found on the right side of the arry
               pos[0]=indexStore.get(target-nums[j]);
@@ -38,18 +39,22 @@ class SolutionTwoSum {
           }else if(indexStore.size()>=1 && nums[i]==numbCom2){//if the first numb was found on the left and 2nd on the right
               pos[0]=indexStore.get(target-nums[i]);
               pos[1]=i;
+          }else{
+              //[-1,-2,-3,-4,-5] -8
+              //pos[0]=indexStore.get();
+              //  0  1  2  3  4    i || j
           }
           if(nums[i]<target){  //left to right
-              indexStore.put(nums[i],i);// -3,0
-              numbCom1=target-nums[i];// 0-(-3)=3, 3 is the number to find
+              indexStore.put(nums[i],i);//-1,0pos
+              indexStore.put(target-nums[i],i);//-7,0pos
+              numbCom1=target-nums[i];
 
           }
           if(nums[j]<target){ //right to left,
-              indexStore.put(nums[j],j);
-            numbCom2=target-nums[j];
+              indexStore.put(nums[j],j); //-5,4pos
+              indexStore.put(target-nums[j],j);//-3,4pos
+              numbCom2=target-nums[j];
           }
-
-
        
       }
               

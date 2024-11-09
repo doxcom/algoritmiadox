@@ -5,7 +5,7 @@ public static void main(String [] args){
 }
 
 
-int [] toSort()
+public static int [] toMerge(int [] arr
 
 
 }

@@ -1,7 +1,7 @@
 package leetcodeproblems;
 
 public class ValidPalindrome {
-
+//https://leetcode.com/problems/valid-palindrome/?envType=study-plan-v2&envId=top-interview-150
     public boolean isPalindrome(String s){
 
         if(s==" ") return true;

@@ -9,8 +9,7 @@ public class RomanToIntegerSolution {
     public static void main(String[] args) {
                 //Key     Value
         HashMap<Character, Integer> romanToInt = new HashMap<>();
-        //I, V, X, L, C, D, M, "III" 'I'
-        // I String de valor 1
+
         romanToInt.put('I', 1);
         romanToInt.put('V', 5);
         romanToInt.put('X', 10);
@@ -19,24 +18,34 @@ public class RomanToIntegerSolution {
         romanToInt.put('D', 500);
         romanToInt.put('M', 1000);
 
-        String roman= "MMMVIII";
+        String romano= "MMMMXVIII";
 
-        String romano="IV"; //String es una cadena de letras, es una cadena de caracteres
-        String romanoB= "XIV";
-        String nombre= "Julian";
-        char nombreCorto = 'J';
+        /*
+        * Input: s = "MCMXCIV"
+         Output: 1994
+         Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
+         *
+         * 1000-100 + 1000= 1900 -10= 1890+90=1980
 
+ */
 
         int suma =0;
+        char caracter;
 
-        for(int i=0;i<romano.length();i++){
+        for(int i=0;i<romano.length();i++) {
 
-            if()
-            char caracter = romano.charAt(i);
-            suma=suma+romanToInt.get(caracter);
+            if (romano.length()%2!=0) {
 
 
-    }
+             //   caracter = romano.charAt(i);
+              //  suma=suma+romanToInt.get(caracter)-romanToInt.get(romano.charAt(i-1));
+
+            }
+
+
+
+
+        }
 
 
         System.out.println("Numero Romano es " +suma);

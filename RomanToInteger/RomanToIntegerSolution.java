@@ -18,10 +18,10 @@ public class RomanToIntegerSolution {
         romanToInt.put('D', 500);
         romanToInt.put('M', 1000);
 
-        String romano= "MMMMXVIII";
-
+        String romano= "IV";
+       //MMM CM XC IX  =3999
         /*
-        * Input: s = "MCMXCIV"
+        * Input: s = "M C M X C I V"
          Output: 1994
          Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
          *
@@ -30,22 +30,23 @@ public class RomanToIntegerSolution {
  */
 
         int suma =0;
-        char caracter;
-
-        for(int i=0;i<romano.length();i++) {
-
-            if (romano.length()%2!=0) {
+        int negative=0;
 
 
-             //   caracter = romano.charAt(i);
-              //  suma=suma+romanToInt.get(caracter)-romanToInt.get(romano.charAt(i-1));
+        for(int i=1;i<romano.length();i++) {
 
+            if (romanToInt.get(romano.charAt(i))< romanToInt.get(romano.charAt(i-1))) {
+
+               suma=suma-romanToInt.get(romano.charAt(i));
+                System.out.println(suma);
+
+            }else{
+                suma+=romanToInt.get(romano.charAt(i));
+                System.out.println("suma aqui "+suma);
             }
 
-
-
-
         }
+        suma=suma+romanToInt.get(romano.charAt(0));
 
 
         System.out.println("Numero Romano es " +suma);

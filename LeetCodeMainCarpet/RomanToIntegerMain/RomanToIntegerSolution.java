@@ -36,27 +36,18 @@ public class RomanToIntegerSolution {
 
 
 
-        for(int i=s.length()-1;i>0;i--) {
+        for(int i=0; i<s.length(); i++) {
+   if(i>0 && romanToInt.get(s.charAt(i-1))<romanToInt.get(s.charAt(i))) {
 
-            if(romanToInt.get(s.charAt(i)) > romanToInt.get(s.charAt(i-1))) {
-                //suma=0+5-1=4  i=6
-                //i=4,suma= 4+ 100-10 =94
-                //i=2,suma=94 +(1000-100=900)=994
-                //i=0,
+       suma = suma+romanToInt.get(s.charAt(i))- 2 * romanToInt.get(s.charAt(i-1));
+   }else{
+       suma = suma+romanToInt.get(s.charAt(i));
+   }
 
-                suma=suma+(romanToInt.get(s.charAt(i))-romanToInt.get(s.charAt(i-1)));
-                i--;  //i--, i=5
-                //i--, i=3
-                //i--, i=1
-            }else{
-                suma=suma+romanToInt.get(s.charAt(i));
-            }
 
         }
 
-        suma=suma+romanToInt.get(s.charAt(0));
-
-        return  suma ;
+        return  suma;
     }
 
 

@@ -38,8 +38,9 @@ public class RomanToIntegerSolution {
 
         for(int i=0; i<s.length(); i++) {
    if(i>0 && romanToInt.get(s.charAt(i-1))<romanToInt.get(s.charAt(i))) {
-
+       System.out.println("suma antes" + suma);
        suma = suma+romanToInt.get(s.charAt(i))- 2 * romanToInt.get(s.charAt(i-1));
+       System.out.println("suma" + suma);
    }else{
        suma = suma+romanToInt.get(s.charAt(i));
    }

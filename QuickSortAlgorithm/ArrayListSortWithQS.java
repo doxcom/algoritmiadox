@@ -24,12 +24,15 @@ public class ArrayListSortWithQS {
         if(low<high){
             //0 < 6                          0   , 6
             int pivotIndex = partition(list, low,high);
+
+            //recursivamente ordenara cada sublista
+            quicksort(list,low,pivotIndex-1);
+            quicksort(list,pivotIndex+1,high);
         }
 
     }
 
     public static int partition(ArrayList<Integer> list, int low,int high){
-
 
         int pivot=list.get(high);// 6
 
@@ -42,7 +45,6 @@ public class ArrayListSortWithQS {
                 int temp=list.get(i);// 0
                 list.set(i,list.get(j));
                 list.set(j,temp);
-
             }
         }
 

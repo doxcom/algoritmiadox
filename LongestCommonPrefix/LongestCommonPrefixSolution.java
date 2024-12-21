@@ -12,6 +12,8 @@ public class LongestCommonPrefixSolution {
     public String longestCommonPrefix(String[] strs) {
 
         int count=0;
+        int words=strs.length;
+
         char[] prefix=new char[strs.length];
 
 

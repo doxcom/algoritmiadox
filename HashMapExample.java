@@ -16,5 +16,8 @@ public class HashMapExample {
         hashStore.put(2,2);
         System.out.println(hashStore.get(2));
 
+        hashStore.put(3,3,5);
+        System.out.println(hashStore.get(3));
+
     }
 }

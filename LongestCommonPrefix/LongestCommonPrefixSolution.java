@@ -10,7 +10,7 @@ public class LongestCommonPrefixSolution {
     }
 
     public String longestCommonPrefix(String[] strs) {
-
+        /*
         int count=0;
         int words=strs.length;
 
@@ -24,7 +24,8 @@ public class LongestCommonPrefixSolution {
         }
 
 
-        prefix.toArrayString;
-        return prefix;
+        //prefix.toArrayString;
+        return prefix; */
+        return "";
     }
 }

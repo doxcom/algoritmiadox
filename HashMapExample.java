@@ -11,13 +11,13 @@ public class HashMapExample {
 
         System.out.println(hashMapVariable.get(1));
       //de puros integer
-        HashMap<Integer, Integer> hashStore = new HashMap<>();
+       // HashMap<Integer, Integer> hashStore = new HashMap<>();
 
-        hashStore.put(2,2);
-        System.out.println(hashStore.get(2));
+       // hashStore.put(2,2);
+       // System.out.println(hashStore.get(2));
 
-        hashStore.put(3,3,5);
-        System.out.println(hashStore.get(3));
+       // hashStore.put(3,3,5);
+        //System.out.println(hashStore.get(3));
 
     }
 }

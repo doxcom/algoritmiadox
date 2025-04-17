@@ -20,16 +20,8 @@ public class TestSorterArraySteps {
                 j++;
                 i++;
             }
-
         }
-
-
    }
-   //nmsize 6
- // i0   i1  i2  i3  i4 ,i5 i6
-//   1,  2 , 2  , 3,  5 , 6
-//  j0   j1  j2  j3
-//   3,  5 , 6 ,
 
    public static void main(String[] args) {
 
@@ -49,9 +41,5 @@ public class TestSorterArraySteps {
                System.out.print("["+ foo[i] + "]");
            }
        }
-
-
    }
-
-
 }

@@ -6,38 +6,50 @@ public class TestSorterArraySteps {
 
     int nums1Size = m+n;
     int i=0,j =0;
-    while(nums1Size>0){
-     //compare
+        while(nums1Size>i){
+            //compare
 
-        if(a[i]<b[j]  || a[i]==0){
-            i++;
-        }else if( a[i]==b[j]){
-            b[j] = a[i+1];
-            a[i+1] = a[i];
-            i++;
-        }else if(a[i] > b[j] ){
+            if(a[i]<b[j] && i==0){
+                i++;
+            }else if( a[i]==b[j]){
+                b[j] = a[i+1];
+                a[i+1] = a[i];
+                i=i+2;
+            }else if(b[j] > a[i] && i!=0){
+                a[i]=b[j];
+                j++;
+                i++;
+            }
 
         }
-      nums1Size--;
-    }
+
+
    }
- // i0  i1  i2
-//   1,  2 , 2  , 0,  0 , 0
-//  j0
+   //nmsize 6
+ // i0   i1  i2  i3  i4 ,i5 i6
+//   1,  2 , 2  , 3,  5 , 6
+//  j0   j1  j2  j3
 //   3,  5 , 6 ,
 
    public static void main(String[] args) {
 
-       int[] foo={1,2,3,0,0,0};
-       int[] bar ={2,5,6};
-       int m=3;
-       int n=3;
+       int[] foo={1};
+       int[] bar ={};
+       int m=1;
+       int n=0;
 
-       merge(foo,bar,m,n);
+       if(m==0 && n==1){
+           System.out.println("["+ bar[0] + "]");
+       }else if(m==1 && n==0){
+           System.out.println("["+ foo[0] + "]");
+       }else{
+           merge(foo,bar,m,n);
 
-       for(int i=0; i<foo.length; i++){
-           System.out.print("["+ foo[i] + "]");
+           for(int i=0; i<foo.length; i++){
+               System.out.print("["+ foo[i] + "]");
+           }
        }
+
 
    }
 

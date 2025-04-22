@@ -24,10 +24,12 @@ public class TestSorterArraySteps {
                     i++;
                 }
             }
-
-            for(int k=0; k<nums1.length; k++){
-                System.out.print("["+ nums1[k] + "]");
+            System.out.print("[");
+            System.out.print(nums1[0]);
+            for(int k=1; k<nums1.length; k++){
+                System.out.print("," + nums1[k]);
             }
+            System.out.println("]");
         }
 
 
@@ -35,10 +37,10 @@ public class TestSorterArraySteps {
 
     public static void main(String[] args) {
 
-        int[] foo={1,2,3,0,0,0};
-        int[] bar ={2,5,6};
-        int m=3;
-        int n=3;
+        int[] foo={0};
+        int[] bar ={1};
+        int m=0;
+        int n=1;
         merge(foo,bar,m,n);
 
 
